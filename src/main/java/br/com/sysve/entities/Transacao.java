@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Table(name = "transacao")
 @Data
-public class Transacao extends CadastroGenerico{
+public class Transacao extends BasicDomainObject {
     private BigDecimal valorTotal;
     private BigDecimal desconto;
     private LocalDateTime dataTransacao;

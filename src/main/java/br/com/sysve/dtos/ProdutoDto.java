@@ -1,19 +1,24 @@
 package br.com.sysve.dtos;
 
-import br.com.sysve.entities.ProdutoTransacao;
+import br.com.sysve.converter.annotations.ConverterReferenceEntity;
+import br.com.sysve.entities.Produto;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.UUID;
 
 @Data
+@ConverterReferenceEntity(Produto.class)
 public class ProdutoDto {
 
     private Long id;
-    private String nome;
+    private UUID uuid;
+
+    private String nomeProduto;
     private BigDecimal quantidadeEmbalagem;
     private BigDecimal valorVenda;
     private Long codigoBarra;
     private String caminhoImagem;
     private Boolean ativo;
+
 }

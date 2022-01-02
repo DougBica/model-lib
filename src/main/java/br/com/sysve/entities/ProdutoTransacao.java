@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 @Table(name = "produtTransacao")
 @Entity
 @Data
-public class ProdutoTransacao extends CadastroGenerico{
+public class ProdutoTransacao extends BasicDomainObject {
     private BigDecimal quantidade;
     private BigDecimal valorUnitario;
 
