@@ -7,17 +7,17 @@ import java.util.UUID;
 
 @MappedSuperclass
 @Data
-public class CadastroGenerico {
+public class BasicDomainObject {
 	@Id 
 	@GeneratedValue(strategy= GenerationType.SEQUENCE)
 	private Long id;
 	private UUID uuid;
 
 	@Embedded
-	private Controle controle;
+	private ControlDomain control;
 	
 	
-	public CadastroGenerico() {
+	public BasicDomainObject() {
 		this.uuid = UUID.randomUUID();
 	}
 
