@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class ControlDomain {
     private LocalDateTime registerDate;
     private LocalDateTime editDate;
-    private Long usuarioEdicao;
+    private Long userId;
     @Version
     private Integer version;
     private boolean active;

@@ -10,14 +10,15 @@ import java.util.UUID;
 public class BasicDomainObject {
 	@Id 
 	@GeneratedValue(strategy= GenerationType.SEQUENCE)
-	private Long id;
+	private final Long id;
 	private UUID uuid;
 
 	@Embedded
 	private ControlDomain control;
 	
 	
-	public BasicDomainObject() {
+	public BasicDomainObject(Long id) {
+		this.id = id;
 		this.uuid = UUID.randomUUID();
 	}
 
