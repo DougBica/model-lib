@@ -1,3 +1,3 @@
-Lib de entidades e DTO's padrão projeto de vendas Sysve.
+Lib of basic domain model entitie JPA.
 
-Utilizando versionamento semântico. https://semver.org/lang/pt-BR/
+Using Semantic Versionament. https://semver.org/lang/pt-BR/
