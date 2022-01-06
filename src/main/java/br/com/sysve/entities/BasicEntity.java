@@ -1,13 +1,10 @@
 package br.com.sysve.entities;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.util.UUID;
 
 @MappedSuperclass
-@Data
-public class Entity {
+public class BasicEntity {
 	@Id 
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private UUID uuid;
@@ -20,4 +17,15 @@ public class Entity {
 		this.active = Boolean.TRUE;
 	}
 
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public Integer getVersion() {
+		return version;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
 }
